@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store Rental</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #5D6D7E;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        .book-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .book-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            width: calc(33.333% - 40px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to ABC Book Store Rental</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Books</a>
+    <a href="#">Rentals</a>
+    <a href="#">Contact Us</a>
+</nav>
+
+<main>
+    <section>
+        <h2>Available Books</h2>
+        <div class="book-list">
+            <div class="book-item">
+                <h3>Book Title 1</h3>
+                <p>Author: Author 1</p>
+                <p>Genre: Fiction</p>
+                <p>Price: $10/day</p>
+            </div>
+            <div class="book-item">
+                <h3>Book Title 2</h3>
+                <p>Author: Author 2</p>
+                <p>Genre: Mystery</p>
+                <p>Price: $8/day</p>
+            </div>
+            <div class="book-item">
+                <h3>Book Title 3</h3>
+                <p>Author: Author 3</p>
+                <p>Genre: Sci-Fi</p>
+                <p>Price: $12/day</p>
+            </div>
+            <!-- Add more book items as needed -->
+        </div>
+    </section>
+
+    <section>
+        <h2>How It Works</h2>
+        <p>Select your desired book, add it to your cart, and proceed to checkout. You can rent books for a specific period, and we'll deliver them right to your door!</p>
+    </section>
+
+    <section>
+        <h2>Contact Us</h2>
+        <p>Email: contact@abcbookstore.com</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Address: 123 Book St, City, Country</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 ABC Book Store Rental. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
