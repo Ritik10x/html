@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flying Bird Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background-color: #87CEEB; /* Sky blue background */
+        }
+        .bird {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            border-radius: 50%;
+            top: 50%;
+            left: 100px;
+        }
+        .obstacle {
+            position: absolute;
+            width: 50px;
+            height: 300px;
+            background-color: green;
+            top: 0;
+        }
+        .game-over {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 48px;
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="bird"></div>
+    <div class="game-over">Game Over</div>
+
+    <script>
+        const bird = document.querySelector('.bird');
+        const gameOverText = document.querySelector('.game-over');
+        let birdTop = window.innerHeight / 2;
+        let gravity = 2;
+        let isGameOver = false;
+        let score = 0;
+        
+        function startGame() {
+            // Bird movement
+            const gameLoop = setInterval(() => {
+                if (!isGameOver) {
+                    birdTop += gravity;
+                    bird.style.top = birdTop + 'px';
+
+                    // Check if bird hits the ground
+                    if (birdTop > window.innerHeight - bird.offsetHeight || birdTop < 0) {
+                        gameOver();
+                    }
+                }
+            }, 20);
+
+            // Obstacles
+            const obstacleLoop = setInterval(() => {
+                if (!isGameOver) {
+                    const obstacleHeight = Math.random() * (window.innerHeight - 200);
+                    const obstacle = document.createElement('div');
+                    obstacle.classList.add('obstacle');
+                    obstacle.style.height = obstacleHeight + 'px';
+                    obstacle.style.left = '100%';
+                    document.body.appendChild(obstacle);
+
+                    let obstacleLeft = window.innerWidth;
+
+                    const moveObstacle = setInterval(() => {
+                        if (!isGameOver) {
+                            obstacleLeft -= 5;
+                            obstacle.style.left = obstacleLeft + 'px';
+
+                            // Check for collisions
+                            if (obstacleLeft < 150 && obstacleLeft > 100 && birdTop < obstacleHeight) {
+                                gameOver();
+                            }
+
+                            // Remove obstacle if out of screen
+                            if (obstacleLeft < -50) {
+                                clearInterval(moveObstacle);
+                                document.body.removeChild(obstacle);
+                                score++;
+                            }
+                        }
+                    }, 20);
+                }
+            }, 2000);
+        }
+
+        function gameOver() {
+            isGameOver = true;
+            gameOverText.style.display = 'block';
+        }
+
+        // Bird flies up on spacebar press
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space' && !isGameOver) {
+                birdTop -= 50;
+            }
+        });
+
+        // Start the game
+        startGame();
+    </script>
+</body>
+</html>
