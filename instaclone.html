@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            color: #262626;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: white;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+            font-family: 'Pacifico', cursive;
+            margin: 0;
+        }
+
+        .navbar input {
+            padding: 5px 10px;
+            border: 1px solid #dbdbdb;
+            border-radius: 5px;
+        }
+
+        .navbar .icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .icons img {
+            width: 24px;
+            cursor: pointer;
+        }
+
+        /* Stories */
+        .stories {
+            background-color: white;
+            padding: 10px;
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            border-bottom: 1px solid #dbdbdb;
+        }
+
+        .story {
+            text-align: center;
+        }
+
+        .story img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #ff8501;
+            padding: 2px;
+            margin-bottom: 5px;
+        }
+
+        .story p {
+            font-size: 12px;
+            color: #262626;
+        }
+
+        /* Feed */
+        .feed {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .post {
+            background-color: white;
+            margin-bottom: 20px;
+            border: 1px solid #dbdbdb;
+        }
+
+        .post-header,
+        .post-footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            align-items: center;
+        }
+
+        .post-header img,
+        .post-footer img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .post-header h3,
+        .post-footer p {
+            margin: 0;
+        }
+
+        .post-image {
+            width: 100%;
+        }
+
+        .post-footer .actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .post-footer .actions img {
+            width: 24px;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #fafafa;
+            color: #8e8e8e;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <h1>Instagram</h1>
+        <input type="text" placeholder="Search">
+        <div class="icons">
+            <img src="https://image.flaticon.com/icons/svg/25/25325.svg" alt="Home Icon">
+            <img src="https://image.flaticon.com/icons/svg/54/54481.svg" alt="Message Icon">
+            <img src="https://image.flaticon.com/icons/svg/126/126509.svg" alt="Explore Icon">
+            <img src="https://image.flaticon.com/icons/svg/1077/1077035.svg" alt="Like Icon">
+        </div>
+    </div>
+
+    <!-- Stories Section -->
+    <div class="stories">
+        <div class="story">
+            <img src="https://via.placeholder.com/60" alt="User Story">
+            <p>User 1</p>
+        </div>
+        <div class="story">
+            <img src="https://via.placeholder.com/60" alt="User Story">
+            <p>User 2</p>
+        </div>
+        <div class="story">
+            <img src="https://via.placeholder.com/60" alt="User Story">
+            <p>User 3</p>
+        </div>
+        <div class="story">
+            <img src="https://via.placeholder.com/60" alt="User Story">
+            <p>User 4</p>
+        </div>
+    </div>
+
+    <!-- Feed Section -->
+    <div class="feed">
+        <div class="post">
+            <div class="post-header">
+                <div class="post-user">
+                    <img src="https://via.placeholder.com/32" alt="User Avatar">
+                    <h3>User 1</h3>
+                </div>
+                <p>•••</p>
+            </div>
+            <img src="https://via.placeholder.com/600x400" alt="Post Image" class="post-image">
+            <div class="post-footer">
+                <div class="actions">
+                    <img src="https://image.flaticon.com/icons/svg/1077/1077035.svg" alt="Like Icon">
+                    <img src="https://image.flaticon.com/icons/svg/54/54481.svg" alt="Comment Icon">
+                    <img src="https://image.flaticon.com/icons/svg/126/126489.svg" alt="Share Icon">
+                </div>
+                <p>1,234 likes</p>
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="post-header">
+                <div class="post-user">
+                    <img src="https://via.placeholder.com/32" alt="User Avatar">
+                    <h3>User 2</h3>
+                </div>
+                <p>•••</p>
+            </div>
+            <img src="https://via.placeholder.com/600x400" alt="Post Image" class="post-image">
+            <div class="post-footer">
+                <div class="actions">
+                    <img src="https://image.flaticon.com/icons/svg/1077/1077035.svg" alt="Like Icon">
+                    <img src="https://image.flaticon.com/icons/svg/54/54481.svg" alt="Comment Icon">
+                    <img src="https://image.flaticon.com/icons/svg/126/126489.svg" alt="Share Icon">
+                </div>
+                <p>2,345 likes</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Instagram Clone. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
