@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Clone</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #3b5998;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .navbar input {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .navbar .icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .icons img {
+            width: 24px;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 20px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h3 {
+            margin-bottom: 15px;
+        }
+
+        .sidebar .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            cursor: pointer;
+        }
+
+        .sidebar .menu-item img {
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        /* Feed */
+        .feed {
+            flex: 1;
+        }
+
+        .post {
+            background-color: white;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .post-header,
+        .post-footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            align-items: center;
+        }
+
+        .post-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .post-header h3 {
+            margin: 0;
+        }
+
+        .post-image {
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .post-footer .actions {
+            display: flex;
+            gap: 20px;
+        }
+
+        .post-footer .actions img {
+            width: 24px;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #3b5998;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <h1>Facebook</h1>
+        <input type="text" placeholder="Search Facebook">
+        <div class="icons">
+            <img src="https://image.flaticon.com/icons/svg/25/25325.svg" alt="Home Icon">
+            <img src="https://image.flaticon.com/icons/svg/1077/1077035.svg" alt="Friends Icon">
+            <img src="https://image.flaticon.com/icons/svg/149/149852.svg" alt="Groups Icon">
+            <img src="https://image.flaticon.com/icons/svg/1380/1380338.svg" alt="Notifications Icon">
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Menu</h3>
+            <div class="menu-item">
+                <img src="https://image.flaticon.com/icons/svg/1946/1946433.svg" alt
