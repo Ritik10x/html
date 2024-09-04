@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Notepad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        textarea {
+            width: 80%;
+            height: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+            background-color: #fff;
+            color: #333;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Simple Notepad</h1>
+    <textarea id="notepad" placeholder="Type your notes here..."></textarea>
+    <div>
+        <button onclick="saveNote()">Save</button>
+        <button onclick="loadNote()">Load</button>
+        <button onclick="clearNote()">Clear</button>
+    </div>
+
+    <script>
+        // Save the note to local storage
+        function saveNote() {
+            const noteContent = document.getElementById('notepad').value;
+            localStorage.setItem('note', noteContent);
+            alert('Note saved!');
+        }
+
+        // Load the note from local storage
+        function loadNote() {
+            const savedNote = localStorage.getItem('note');
+            if (savedNote) {
+                document.getElementById('notepad').value = savedNote;
+                alert('Note loaded!');
+            } else {
+                alert('No saved note found.');
+            }
+        }
+
+        // Clear the textarea and local storage
+        function clearNote() {
+            document.getElementById('notepad').value = '';
+            localStorage.removeItem('note');
+            alert('Note cleared!');
+        }
+    </script>
+
+</body>
+
+</html>
