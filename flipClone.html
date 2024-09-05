@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f3f6;
+        }
+
+        /* Header */
+        .header {
+            background-color: #2874f0;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            flex: 1;
+            margin: 0 20px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 2px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .buttons button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #ff9f00;
+            color: white;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background-color: #fb641b;
+        }
+
+        /* Banner */
+        .banner {
+            background-image: url('https://via.placeholder.com/1500x500');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            margin-top: 10px;
+        }
+
+        /* Product Categories */
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .category {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            width: 18%;
+        }
+
+        .category img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .category h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .category p {
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">Flipkart</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products, brands and more">
+        </div>
+        <div class="buttons">
+            <button>Login</button>
+            <button>More</button>
+            <button>Cart</button>
+        </div>
+    </div>
+
+    <!-- Banner -->
+    <div class="banner"></div>
+
+    <!-- Product Categories -->
+    <div class="categories">
+        <div class="category">
+            <img src="https://via.placeholder.com/100" alt="Mobiles">
+            <h3>Mobiles</h3>
+            <p>Best deals on smartphones</p>
+        </div>
+        <div class="category">
+            <img src="https://via.placeholder.com/100" alt="Fashion">
+            <h3>Fashion</h3>
+            <p>Latest trends in fashion</p>
+        </div>
+        <div class="category">
+            <img src="https://via.placeholder.com/100" alt="Electronics">
+            <h3>Electronics</h3>
+            <p>Top brands and products</p>
+        </div>
+        <div class="category">
+            <img src="https://via.placeholder.com/100" alt="Appliances">
+            <h3>Appliances</h3>
+            <p>Home and kitchen appliances</p>
+        </div>
+        <div class="category">
+            <img src="https://via.placeholder.com/100" alt="Books">
+            <h3>Books</h3>
+            <p>Books, stationery, and more</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
